@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".TrendingFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_toolbar_trending"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/rounded_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/gilroy_semibold"
+                android:text="Trending"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@+id/relative_toolbar_trending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_59sdp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <co.lujun.androidtagview.TagContainerLayout
+                android:id="@+id/tag_group"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/gilroy_medium"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:container_background_color="#00000000"
+                app:container_border_color="#00000000"
+                app:container_border_radius="0dp"
+                app:container_gravity="left"
+                app:horizontal_interval="10dp"
+                app:tag_background_color="#FFFFFFFF"
+                app:tag_border_color="#330000ff"
+                app:tag_border_width="1dp"
+                app:tag_clickable="true"
+                app:tag_corner_radius="20dp"
+                app:tag_enable_cross="true"
+                app:tag_horizontal_padding="15dp"
+                app:tag_max_length="18"
+                app:tag_selectable="true"
+                app:tag_text_color="#ff666666"
+                app:tag_text_direction="ltr"
+                app:tag_text_size="14sp"
+                app:tag_theme="none"
+                app:tag_vertical_padding="10dp"
+                app:vertical_interval="10dp" />
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

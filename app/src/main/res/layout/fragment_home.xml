@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_home"
+            android:layout_centerInParent="true"/>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_home_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue">
+
+            <RelativeLayout
+                android:elevation="@dimen/_10sdp"
+                android:id="@+id/relative_home_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:background="@drawable/back_home"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <TextView
+                    android:id="@+id/title_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:text="# Hashtag Generator"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/subTitle_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_home"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_22sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:text="FIND THE MOST TRENDING
+#TAG TO MAKE YOUR POST
+FAMOUS"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:fontFamily="@font/gilroy_bold"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/subTitle_home"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_20sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/searchId"
+                            android:maxLength="20"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_toLeftOf="@+id/relative_searchIcon"
+                            android:hint="Enter text or caption"
+                            android:scrollHorizontally="true"
+                            android:maxLines="1"/>
+
+                        <RelativeLayout
+                            android:id="@+id/relative_searchIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/pink">
+
+                            <ImageView
+                                android:id="@+id/search_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_10sdp"
+                                android:src="@drawable/search_svg" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_search"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_25sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_clear"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardCornerRadius="@dimen/_20sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/gilroy_semibold"
+                                android:text="Clear All"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_generate"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_toRightOf="@+id/card_clear"
+                        android:backgroundTint="@color/pink"
+                        app:cardCornerRadius="@dimen/_20sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/relative_generate_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/gilroy_semibold"
+                                android:text="Generate"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_home_1"
+            android:background="@color/light_blue"
+            android:padding="@dimen/_10sdp">
+
+            <ScrollView
+                android:id="@+id/scroll_for_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:animateLayoutChanges="true"
+                android:minHeight="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <co.lujun.androidtagview.TagContainerLayout
+                        android:id="@+id/text_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        app:container_background_color="#00000000"
+                        app:container_border_color="#00000000"
+                        app:container_border_radius="0dp"
+                        app:container_gravity="left"
+                        app:horizontal_interval="10dp"
+                        app:tag_background_color="#FFFFFFFF"
+                        app:tag_border_color="#330000ff"
+                        app:tag_border_width="1dp"
+                        app:tag_clickable="false"
+                        app:tag_corner_radius="20dp"
+                        app:tag_enable_cross="false"
+                        app:tag_horizontal_padding="15dp"
+                        app:tag_max_length="18"
+                        app:tag_selectable="true"
+                        app:tag_text_color="#ff666666"
+                        app:tag_text_direction="ltr"
+                        app:tag_text_size="14sp"
+                        app:tag_theme="none"
+                        app:tag_vertical_padding="10dp"
+                        app:vertical_interval="10dp" />
+                </RelativeLayout>
+            </ScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_recent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_below="@+id/scroll_for_recyclerview"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
+
+                <RelativeLayout
+                    android:background="@drawable/gradient_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image_recent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp"
+                        android:src="@drawable/recent_svg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/image_recent"
+                        android:text="Recent Searches"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:elevation="@dimen/_8sdp"/>
+
+                    <ImageView
+                        android:id="@+id/show_recent_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_21sdp"
+                        android:src="@drawable/more_recent_svg" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_recent"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_recent"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:elevation="@dimen/_8sdp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

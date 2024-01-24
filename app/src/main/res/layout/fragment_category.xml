@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CategoryFragment"
+    android:background="@color/light_blue">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:id="@+id/relative_toolbar_categories"
+           android:layout_width="match_parent"
+           android:layout_height="?actionBarSize"
+           android:background="@drawable/rounded_layout">
+
+           <ImageView
+               android:padding="@dimen/_1sdp"
+               android:id="@+id/sort_cards"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_centerVertical="true"
+               android:layout_marginStart="@dimen/_15sdp"
+               android:layout_marginTop="@dimen/_15sdp"
+               android:layout_marginEnd="@dimen/_15sdp"
+               android:layout_marginBottom="@dimen/_15sdp"
+               android:src="@drawable/sorting_icon" />
+
+           <ImageView
+               android:id="@+id/close_search"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_marginStart="@dimen/_17sdp"
+               android:layout_marginTop="@dimen/_17sdp"
+               android:layout_marginEnd="@dimen/_17sdp"
+               android:layout_marginBottom="@dimen/_17sdp"
+               android:src="@drawable/close_dialog_svg"
+               android:visibility="gone"/>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card_search"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardCornerRadius="10dp"
+               android:layout_toRightOf="@+id/close_search"
+               android:layout_toLeftOf="@+id/searchIcon"
+               android:layout_centerVertical="true"
+               android:visibility="gone">
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <EditText
+                       android:fontFamily="@font/gilroy_medium"
+                       android:id="@+id/search_id"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="5dp"
+                       android:backgroundTint="@color/white"
+                       android:hint="Search App"
+                       android:textSize="@dimen/_10sdp" />
+               </RelativeLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <TextView
+               android:id="@+id/title_category"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:fontFamily="@font/gilroy_semibold"
+               android:text="Categories"
+               android:textColor="@color/white"
+               android:textSize="@dimen/_15sdp" />
+
+           <ImageView
+               android:id="@+id/searchIcon"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:layout_marginStart="@dimen/_14sdp"
+               android:layout_marginTop="@dimen/_14sdp"
+               android:layout_marginEnd="@dimen/_14sdp"
+               android:layout_marginRight="@dimen/_10sdp"
+               android:layout_marginBottom="@dimen/_14sdp"
+               android:src="@drawable/search_svg" />
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:id="@+id/relative_content_categories"
+           android:layout_below="@+id/relative_toolbar_categories"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginBottom="@dimen/_55sdp">
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/recycler_view_cateories"
+               android:layout_centerHorizontal="true"/>
+
+       </RelativeLayout>
+
+
+
+
+   </RelativeLayout>
+
+</FrameLayout>

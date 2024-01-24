@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_toolbar_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@drawable/rounded_layout">
+
+                <TextView
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Selected #Tag"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/close_dialog_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_16sdp"
+                    android:src="@drawable/close_dialog_svg" />
+
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/scroll_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_toolbar_dialog">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <co.lujun.androidtagview.TagContainerLayout
+                        android:id="@+id/tag_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:fontFamily="@font/gilroy_medium"
+                        app:container_background_color="#00000000"
+                        app:container_border_color="#00000000"
+                        app:container_border_radius="0dp"
+                        app:container_gravity="left"
+                        app:horizontal_interval="10dp"
+                        app:tag_background_color="#FFFFFFFF"
+                        app:tag_border_color="#330000ff"
+                        app:tag_border_width="1dp"
+                        app:tag_clickable="true"
+                        app:tag_corner_radius="20dp"
+                        app:tag_enable_cross="false"
+                        app:tag_enable_star="false"
+                        app:tag_horizontal_padding="15dp"
+                        app:tag_max_length="18"
+                        app:tag_selectable="true"
+                        app:tag_text_color="#ff666666"
+                        app:tag_text_direction="ltr"
+                        app:tag_text_size="14sp"
+                        app:tag_theme="none"
+                        app:tag_vertical_padding="10dp"
+                        app:vertical_interval="10dp" />
+                </RelativeLayout>
+            </ScrollView>
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:id="@+id/relative_copy_and_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_copy"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:backgroundTint="@color/pink"
+                    app:cardCornerRadius="@dimen/_20sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/image_copy"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/copy_tag" />
+
+                        <TextView
+                            android:fontFamily="@font/gilroy_semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_toRightOf="@+id/image_copy"
+                            android:text="Copy"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"
+                            android:maxLines="1"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_save"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/card_copy"
+                    android:backgroundTint="@color/pink"
+                    app:cardCornerRadius="@dimen/_20sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/image_save"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/save_tag" />
+
+                        <TextView
+                            android:fontFamily="@font/gilroy_semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_toRightOf="@+id/image_save"
+                            android:text="Save"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"
+                            android:maxLines="1"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_delete"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/card_save"
+                    android:backgroundTint="@color/pink"
+                    app:cardCornerRadius="@dimen/_20sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@+id/image_Delete"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/delete_svg" />
+
+                        <TextView
+                            android:fontFamily="@font/gilroy_semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_toRightOf="@+id/image_Delete"
+                            android:text="Delete"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"
+                            android:maxLines="1"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

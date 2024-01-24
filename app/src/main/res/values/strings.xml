@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">HashApplication</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_generate_tags">GenerateTagsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string-array name="titles_list">
+        <item name='Birthday'>Birthday</item>
+        <item name='Foodie'>Foodie</item>
+        <item name='Coffee'>Coffee</item>
+        <item name='Love'>Love</item>
+        <item name='Morning'>Morning</item>
+        <item name='Sunset'>Sunset</item>
+        <item name='Work'>Work</item>
+        <item name='Holiday'>Holiday</item>
+        <item name='Book'>Book</item>
+        <item name='Volunteer'>Volunteer</item>
+        <item name='Night'>Night</item>
+        <item name='Happiness'>Happiness</item>
+        <item name='Sadness'>Sadness</item>
+        <item name='Art'>Art</item>
+        <item name='School'>School</item>
+        <item name='Travel'>Travel</item>
+        <item name='Photograpy'>Photograpy</item>
+        <item name='Winter'>Winter</item>
+        <item name='Summer'>Summer</item>
+        <item name='Beauty'>Beauty</item>
+    </string-array>
+
+</resources>

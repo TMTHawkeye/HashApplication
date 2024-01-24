@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_3sdp"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:weightSum="2"
+    android:layout_centerHorizontal="true">
+
+    <androidx.cardview.widget.CardView
+        android:scaleType="fitXY"
+        android:id="@+id/card_view_of_category"
+        android:layout_width="90pt"
+        android:layout_height="90pt"
+        android:layout_weight="1"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+
+        android:alpha="1">
+
+        <RelativeLayout
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardimage"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:alpha="1"
+                app:cardCornerRadius="@dimen/_100sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:adjustViewBounds="true"
+                        android:id="@+id/image_of_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:alpha="1"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/borthday_svg" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/cardimage"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/imagedot"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:src="@drawable/dots_svg" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title_of_category"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/gilroy_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Birthday"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

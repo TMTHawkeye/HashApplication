@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 33
+        versionCode 1
+        versionName "0.0.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    api 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+}
+
+
+//bintray {
+//    user = System.getenv('bintrayUser')
+//    key = System.getenv('bintrayKey')
+//    publications = ['bottomnavbar']
+//    pkg {
+//        repo = 'bottomnavbar'
+//        name = 'bottomnavbar'
+//        websiteUrl = 'https://github.com/jitinsharma/BottomNavBar'
+//        vcsUrl = 'https://github.com/jitinsharma/BottomNavBar.git'
+//        licenses = ["MIT"]
+//        publish = true
+//        version {
+//            name = android.defaultConfig.versionName
+//            desc = 'Bottom Navigation Bar for Android'
+//            released  = new Date()
+//        }
+//    }
+//}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+publishing {
+    publications {
+        bottomnavbar(MavenPublication) {
+            groupId 'io.github.jitinsharma'
+            artifactId 'bottomnavbar'
+            version android.defaultConfig.versionName
+            artifact(sourcesJar)
+            artifact("$buildDir/outputs/aar/bottomnavbar-release.aar")
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.api.allDependencies.each { dependency ->
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dependency.group)
+                    dependencyNode.appendNode('artifactId', dependency.name)
+                    dependencyNode.appendNode('version', dependency.version)
+                }
+            }
+        }
+    }
+}
